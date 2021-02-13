@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 500;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: red;
+}
+
+a:hover {
+    color: cadetblue;
+}
+
+/* Top Section */
+
+.top-section {
+    height: 300px;
+    background-color: #252a2e;
+    color: white;
+}
+
+.designation {
+    letter-spacing: 0.4rem;
+}
+
+.work {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: black;
+}
+
+/* About Section */
+
+.about-section .container {
+    display: grid;
+    grid-template-areas: "pro-pic"
+                        "about-info";
+}
+
+.pro-pic {
+    grid-area: pro-pic;
+}
+
+.pro-pic img {
+    width: 300px;
+    height: auto;
+}
+
+.about-info {
+    grid-area: about-info;
+}
+
+@media (min-width: 800px) {
+    .about-section .container {
+        grid-template-areas: "pro-pic about-info";
+    }
+
+    .about-info {
+        padding-left: 50px;
+    }
+}
+
+/* Education Section */
+
+.education-section {
+    background-color: #252a2e;
+    color: white;
+}
+
+.education-section h2 {
+    font-weight: 500;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 5px 20px;
+}
+
+@media (max-width: 800px) {
+    .optional {
+        display: none;
+    }
+    th, td {
+        border: 1px solid white;
+        padding: 5px 10px;
+    }
+}
+
+/* Interest Section */
+
+.interest-section ul {
+    width: min-content;
+    list-style: none;
+    position: relative;
+    left: -20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2em;
+    column-gap: 2em;
+}
+
+.interest-item {
+    background-color: #252a2e;
+    color: white;
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.50);
+}
+
+@media (min-width: 800px) {
+    .interest-section ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* Quote Section */
+
+.quote-section {
+    background-color: #252a2e;
+    color: white;
+}
+
+.quote-section h2 {
+    font-weight: 500;
+}
+
+.quote {
+    max-width: 1000px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.quote+.quote {
+    margin-top: 25px;
+}
+
+.quote span {
+    font-weight: 700;
+    color: red;
+}
+
+/* Footer Section */
+
+footer h3 {
+    background-color: white;
+    color: black;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+}
